@@ -29,7 +29,8 @@ class CandyModel
                                                         ON pro.Id = mag.ProductId
                                                         INNER JOIN leverancier lev
                                                         ON lev.Id = prolev.LeverancierId
-                WHERE pro.Id = $Id";
+                WHERE pro.Id = $Id
+                ORDER BY prolev.DatumLevering asc";
 
         // $this->db->bind(':id', $Id);    
         $this->db->query($sql);
