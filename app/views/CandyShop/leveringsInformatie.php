@@ -29,12 +29,12 @@
 
     }
     ?>
-<li>
-    <ul>Leverancier: <?= $leverancier ?></ul>
-    <ul>Contactpersoon: <?= $contactpersoon ?></ul>
-    <ul>LeverancierNummer: <?= $leverancierNummer ?></ul>
-    <ul>Mobiel: <?= $mobiel ?></ul>
-</li>
+<ul>
+    <li>Leverancier: <?= $leverancier ?></li>
+    <li>Contactpersoon: <?= $contactpersoon ?></li>
+    <li>LeverancierNummer: <?= $leverancierNummer ?></li>
+    <li>Mobiel: <?= $mobiel ?></li>
+</ul>
 
 <div class="tableDiv">
 <table>
