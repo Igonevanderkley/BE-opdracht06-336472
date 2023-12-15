@@ -22,9 +22,9 @@
                         <td>$VerpakkingsEenheid</td>
                         <td>$magazijnItem->AantalAanwezig</td>
                         <td>
-                        <a href=''>
+                            <a href='" . URLROOT . "/CandyShop/overzichtAllergenen/$magazijnItem->Id'>
                                 <img src='/public/img/allergy.png'>
-                        </a>
+                            </a>
                         </td>
                         
                         <td>
