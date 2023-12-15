@@ -1,5 +1,4 @@
 <?php
-
 class CandyShop extends BaseController
 {
     private $candyModel;
@@ -26,5 +25,18 @@ class CandyShop extends BaseController
 
         $this->view('CandyShop/leveringsInformatie', $data);
     }
+
+    public function overzichtAllergenen($Id) {
+        $allergeenData = $this->candyModel->getOverzichtAllergenen($Id);
+
+
+        $productData = $this->candyModel->getProductData($Id);
+
+        $data = ['allergeenData' => $allergeenData, 'productData' => $productData,];
+
+        $this->view('CandyShop/overzichtAllergenen', $data);
+    }
+
+
   
 }
