@@ -40,7 +40,7 @@ INSERT INTO Allergeen    (Id, Naam,              Omschrijving)
                         (5, 'Soja',            'Dit product bevat soja');
 
 
-create table leverancier (
+create table Leverancier (
     Id                      INT		PRIMARY KEY,
     Naam                    VARCHAR(50),
     ContactPersoon          VARCHAR(50),
@@ -48,7 +48,7 @@ create table leverancier (
     Mobiel                  VARCHAR(15)
 );
 
-INSERT INTO leverancier (Id, Naam,                   ContactPersoon,     LeverancierNummer,  Mobiel)
+INSERT INTO Leverancier (Id, Naam,                   ContactPersoon,     LeverancierNummer,  Mobiel)
                 VALUES  (1, 'Venco',                'Bert van Linge',   'L102 93 84 719',   '06-28493827'),
                         (2, 'Astra sweets',         'Jasper del Monte', 'L102 92 84 315',   '06-39398734'),
                         (3, 'Haribo',               'Sven Stalman',     'L102 93 24 748',   '06-24383292'),
@@ -117,7 +117,7 @@ create table ProductLeverancier (
 		Aantal                          INT,
 		DatumEerstVolgendeLevering      DATE,
 
-		FOREIGN KEY (LeverancierId)     REFERENCES leverancier(Id)
+		FOREIGN KEY (LeverancierId)     REFERENCES Leverancier(Id)
 );
 
 INSERT INTO ProductLeverancier (Id, LeverancierId, ProductId, DatumLevering, Aantal, DatumEerstVolgendeLevering)
