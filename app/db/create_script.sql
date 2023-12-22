@@ -54,6 +54,8 @@ INSERT INTO Leverancier (Id, Naam,                   ContactPersoon,     Leveran
                         (3, 'Haribo',               'Sven Stalman',     'L102 93 24 748',   '06-24383292'),
                         (4, 'Joyce  Stelterberg',   'Jasper del Monte', 'L102 38 45 773',   '06-48293823'),
                         (5, 'De Bron',              'Remco Veenstra',   'L102 38 57 736',   '06-34291234');
+                        (6, 'Quality Street',       'Johan Nooij',      'L102 92 34 586',   '06-23458456');
+
 
 
 create table Magazijn (
