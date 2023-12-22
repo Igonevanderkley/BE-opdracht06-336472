@@ -41,4 +41,14 @@ class CandyShop extends BaseController
         $data = ['allergeenData' => $allergeenData, 'productData' => $productData,];
         $this->view('CandyShop/overzichtAllergenen', $data);
     }
+
+    public function overzichtLeverancier() {
+
+
+        $leverancierInformatie = $this->candyModel->getOverzichtLeverancier();
+        
+        $data = ['leverancierInformatie' => $leverancierInformatie ];
+
+        $this->view('CandyShop/overzichtLeverancier', $data);
+    }
 }
