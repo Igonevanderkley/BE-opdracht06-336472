@@ -71,4 +71,19 @@ class CandyModel
         $this->db->query($sql);
         return $this->db->resultSet();
     }
+
+    function getOverzichtLeverancier()
+    {
+        $sql = "SELECT Lev.Naam, Lev.ContactPersoon, Lev.LeverancierNummer, Lev.Mobiel, count(DISTINCT pro.Id) as AantalVerschillendeProducten
+                FROM Product pro
+                INNER JOIN ProductLeverancier prolev
+                ON pro.Id = prolev.ProductId
+                INNER JOIN Leverancier Lev
+                ON prolev.LeverancierId = Lev.Id
+                GROUP BY LeverancierId
+                ORDER BY AantalVerschillendeProducten desc";
+
+        $this->db->query($sql);
+        return $this->db->resultSet();
+    }
 }
